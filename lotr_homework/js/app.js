@@ -108,19 +108,27 @@ const lands = [
   };
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
+// The commit message should read:  "Chapter 3 complete - Made the ring and gave it to Frodo".
 
 // ============
 // Chapter 4
 // ============
-const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
   // 2. give each of the baddies a class of "baddy"
-
   // 3. remember to append them to Mordor
-};
+
+  const makeBaddies = () => {
+    const $ul = $('<ul/>');
+      for(let i = 0; i < baddies.length; i++) {
+        const $li = $('<li/>');
+        $li.attr('class', 'baddy');
+        $li.text(baddies[i]);
+        $ul.append($li);
+      };
+      $('#Mordor').append($ul)
+
+  };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
