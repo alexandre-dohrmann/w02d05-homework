@@ -41,7 +41,8 @@ const lands = [
 // Chapter 1
 // ============
 
-// HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
+// HINT: Make a console.log for each of your functions to make sure that, when you click, 
+// the correct function is being called!
 // 1. create a section tag with an id of middle-earth
 // 2. append the section to the body of the DOM.
 // 3. use a for loop to iterate over the lands array that does the following:
@@ -70,7 +71,8 @@ const lands = [
 
 // ============
 // Chapter 2
-// ===========+
+// ============
+
     const makeHobbits = () => {
 
   // 1. display an unordered list of the hobbits in the shire.
@@ -118,17 +120,17 @@ const lands = [
   // 2. give each of the baddies a class of "baddy"
   // 3. remember to append them to Mordor
 
-  const makeBaddies = () => {
-    const $ul = $('<ul/>');
-      for(let i = 0; i < baddies.length; i++) {
-        const $li = $('<li/>');
-        $li.attr('class', 'baddy');
-        $li.text(baddies[i]);
-        $ul.append($li);
-      };
-      $('#Mordor').append($ul)
+    const makeBaddies = () => {
+      const $ul = $('<ul/>');
+        for(let i = 0; i < baddies.length; i++) {
+          const $li = $('<li/>');
+          $li.attr('class', 'baddy');
+          $li.text(baddies[i]);
+          $ul.append($li);
+        };
+        $('#Mordor').append($ul)
 
-  };
+    };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -136,15 +138,23 @@ const lands = [
 // ============
 // Chapter 5
 // ============
-const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
   // 2. display an unordered list of buddies in the aside
-
   // 3. give each of the buddies a class of "buddy"
 
-};
+    const makeBuddies = () => {
+      const $aside = $('<aside/>');
+      $('#middle-earth').append($aside);
+      const $ul = $('<ul/>');
+      $aside.append($ul);
+        for(let i = 0; i < buddies.length; i++) {
+          const $li = $('<li/>');
+          $li.attr('class', 'buddy');
+          $li.text(buddies[i]);
+          $ul.append($li);
+        };
+    };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
