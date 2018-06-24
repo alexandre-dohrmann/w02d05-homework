@@ -56,13 +56,14 @@ const makeMiddleEarth = () => {
   // 3. use a for loop to iterate over the lands array that does the following:
 
   for(let i = 0; i < lands.length; i++) {
-    const $article = $('<artile/>');
+    const $article = $('<article/>');
     $article.attr('id', lands[i])
     const $landHeader = $('<h1/>');
     $landHeader.text(lands[i]);
     $article.append($landHeader);
     $middleEarth.append($article);
   }
+
 
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
@@ -82,9 +83,17 @@ const makeMiddleEarth = () => {
 // ============
 const makeHobbits = () => {
 
-  console.log('Make hobbits');
-
   // 1. display an unordered list of the hobbits in the shire.
+
+const $ul = $('<ul/>');
+for(let i = 0; i < hobbits.length; i++) {
+  const $li = $('<li/>');
+  $li.attr('id', 'hobbit');
+  $li.text(hobbits[i]);
+  $ul.append($li);
+};
+$('#The-Shire').append($ul)
+
 
   // 2. give each hobbit a class of "hobbit"
 
@@ -103,6 +112,8 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+const $div = ('<div id="the-ring"</div>');
+
 
   // 2. add the ring as a child of Frodo
 
