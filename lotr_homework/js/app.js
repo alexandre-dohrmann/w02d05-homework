@@ -40,68 +40,53 @@ const lands = [
 // ============
 // Chapter 1
 // ============
-const makeMiddleEarth = () => {
 
-  // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
+// HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
+// 1. create a section tag with an id of middle-earth
+// 2. append the section to the body of the DOM.
+// 3. use a for loop to iterate over the lands array that does the following:
+//   3a. creates an article tag (there should be one for each land when the loop is done)
+//   3b. gives each land article an `id` tag of the corresponding land name
+//   3c. includes an h1 with the name of the land inside each land article
+//   3d. appends each land to the middle-earth section
 
-  console.log("Trying to make middle earth.");
+    const makeMiddleEarth = () => {
+      console.log("Trying to make middle earth.");
 
-  // 1. create a section tag with an id of middle-earth
-  const $middleEarth = $('<section id="middle-earth"></section>');
-
-  // 2. append the section to the body of the DOM.
-
-  $('body').append($middleEarth);
-
-  // 3. use a for loop to iterate over the lands array that does the following:
-
-  for(let i = 0; i < lands.length; i++) {
-    const $article = $('<article/>');
-    $article.attr('id', lands[i])
-    const $landHeader = $('<h1/>');
-    $landHeader.text(lands[i]);
-    $article.append($landHeader);
-    $middleEarth.append($article);
-  }
-
-
-  //   3a. creates an article tag (there should be one for each land when the loop is done)
-
-  //   3b. gives each land article an `id` tag of the corresponding land name
-
-  //   3c. includes an h1 with the name of the land inside each land article
-
-  //   3d. appends each land to the middle-earth section
-
-};
+      const $middleEarth = $('<section id="middle-earth"></section>');
+      $('body').append($middleEarth);
+        for(let i = 0; i < lands.length; i++) {
+          const $article = $('<article/>');
+          $article.attr('id', lands[i])
+          const $landHeader = $('<h1/>');
+          $landHeader.text(lands[i]);
+          $article.append($landHeader);
+          $middleEarth.append($article);
+        }
+    };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
 // ============
 // Chapter 2
-// ============
-const makeHobbits = () => {
+// ===========+
+    const makeHobbits = () => {
 
   // 1. display an unordered list of the hobbits in the shire.
-
-const $ul = $('<ul/>');
-for(let i = 0; i < hobbits.length; i++) {
-  const $li = $('<li/>');
-  $li.attr('id', 'hobbit');
-  $li.text(hobbits[i]);
-  $ul.append($li);
-};
-$('#The-Shire').append($ul)
-
-
   // 2. give each hobbit a class of "hobbit"
-
   // hint: create a 'ul' outside the loop upon which to append the 'li's
-
   // hint: get 'The-Shire' by using its id
 
-};
+    const $ul = $('<ul/>');
+      for(let i = 0; i < hobbits.length; i++) {
+        const $li = $('<li/>');
+        $li.attr('class', 'hobbit');
+        $li.text(hobbits[i]);
+        $ul.append($li);
+      };
+      $('#The-Shire').append($ul)
+    };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -109,19 +94,18 @@ $('#The-Shire').append($ul)
 // ============
 // Chapter 3
 // ============
-const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-const $div = ('<div id="the-ring"</div>');
-
-
   // 2. add the ring as a child of Frodo
-
-  // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-
+  // hint: Frodo does not have an id, but there is a command to retrieve all elements 
+  // with a certain class. This should give you an array for you to access . . .
   // when you think you have given Frodo the ring, check in your Elements tab
 
-};
+  const keepItSecretKeepItSafe = () => {
+    const $div = ('<div id="the-ring"></div>');
+    $('.hobbit').eq(0).append($div);
+    console.log($div);
+  };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
