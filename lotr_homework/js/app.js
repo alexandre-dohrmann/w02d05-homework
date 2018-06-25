@@ -284,7 +284,7 @@ const lands = [
     const thereAndBackAgain = () => {
       $('#gollum').remove();
       $('#the-ring').remove();
-      $('#baddy').remove();
+      $('.baddy').remove();
       $('.hobbit').appendTo($('#The-Shire'));
     };
 
