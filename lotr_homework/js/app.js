@@ -104,8 +104,8 @@ const lands = [
   // when you think you have given Frodo the ring, check in your Elements tab
 
   const keepItSecretKeepItSafe = () => {
-    const $div = ('<div id="the-ring"></div>');
-    $('li:contains("Frodo")').append($div);
+    const $ring = ('<div id="the-ring">***ring***</div>');
+    $('li:contains("Frodo")').append($ring);
   };
 
 // COMMIT YOUR WORK
@@ -248,7 +248,7 @@ const lands = [
     const itsDangerousToGoAlone = () => {
       $('.hobbit').eq(0).appendTo('#Mordor');
       $('.hobbit').eq(1).appendTo('#Mordor');
-      const $mDoom = $('<div id="mount-doom"></div>');
+      const $mDoom = $('<div id="mount-doom">Mt. Doom</div>');
       $('#Mordor').append($mDoom);
     };
 
@@ -258,15 +258,17 @@ const lands = [
 // ============
 // Chapter 12
 // ============
-const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
   // 2. Move the ring from Frodo and give it to Gollum
-
   // 3. Move Gollum into Mount Doom
 
-};
+    const weWantsIt = () => {
+      const $gollum = $('<div id="gollum">Gollum</div>');
+      $('#Mordor').append($gollum);
+      $('#the-ring').appendTo($('#gollum'));
+      $('#gollum').appendTo($('#mount-doom'));
+    };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
