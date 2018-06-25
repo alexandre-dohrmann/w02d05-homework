@@ -105,8 +105,7 @@ const lands = [
 
   const keepItSecretKeepItSafe = () => {
     const $div = ('<div id="the-ring"></div>');
-    $('.hobbit').eq(0).append($div);
-    console.log($div);
+    $('li:contains("Frodo")').append($div);
   };
 
 // COMMIT YOUR WORK
@@ -122,14 +121,13 @@ const lands = [
 
     const makeBaddies = () => {
       const $ul = $('<ul/>');
+      $('#Mordor').append($ul)
         for(let i = 0; i < baddies.length; i++) {
           const $li = $('<li/>');
           $li.attr('class', 'baddy');
           $li.text(baddies[i]);
           $ul.append($li);
         };
-        $('#Mordor').append($ul)
-
     };
 
 // COMMIT YOUR WORK
@@ -145,7 +143,7 @@ const lands = [
 
     const makeBuddies = () => {
       const $aside = $('<aside/>');
-      $('#middle-earth').append($aside);
+      $aside.insertAfter('#Mordor');
       const $ul = $('<ul/>');
       $aside.append($ul);
         for(let i = 0; i < buddies.length; i++) {
@@ -183,23 +181,25 @@ const lands = [
         $('.buddy').eq(3).text('Aragorn');
       };
 
-  // COMMIT YOUR WORK
-  // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
+// COMMIT YOUR WORK
+// The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
 // ============
 // Chapter 8
 // ============
-const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
   // 3. append the fellowship to middle-earth
-
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
-};
+    const forgeTheFellowShip = () => {
+      const $fellowship = $('<div id="the-fellowship"></div>');
+      $fellowship.append('<h1>The Fellowship</h1>');
+      $('#middle-earth').append($fellowship); 
+      $('.hobbit').appendTo($('#the-fellowship'));
+      $('aside').children('ul').appendTo($('#the-fellowship'));
+    };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -207,18 +207,7 @@ const forgeTheFellowShip = () => {
 // ============
 // Chapter 9
 // ============
-const theBalrog = () => {
 
-  // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
-  // 2. add a class "the-white" to this element
-
-  // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
-};
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
 // ============
 // Chapter 10
